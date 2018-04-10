@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Документ без названия</title>
+</head>
+<body align="center">
+<div class="container">
+    <table align="center">
+        <tr>
+            <!--Шапка сайта.-->
+            <table align="center" class="header-table">
+                <tr>
+                    <th class="th-header">
+                        <h1 class="header-text">Ла Лига
+                        </h1>
+                    </th>
+                </tr>
+            </table>
+            <div id="navigation" class="navigation">
+                <div id="main_menu" class="main-menu">
+                    <ul class="menu">
+                        <li class="first leaf"><a href="index.html" class="item">Главная</a></li>
+                        <li class="leaf"><a href="comands.html" class="item">Команды</a></li>
+                        <li class="leaf"><a href="author.html" class="item active">Обратная связь</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h2>Обратная связь</h2>
+            <form>
+                <p>
+                    <label>Имя:</label>
+                    <input class="input-box" type="text"/>
+                </p>
+                <p>
+                    <label>Email:</label>
+                    <input class="input-box"/>
+                </p>
+                <p>
+                    <label>Телефон:</label>
+                    <input class="input-box"/>
+                </p>
+                <p>
+                    <label>Сайт:</label>
+                    <input class="input-box"/>
+                </p>
+                <p>
+                    <label>Текст сообщения:</label>
+                    <textarea class="input-box-text" name="message" cols="40" rows="6" required ></textarea>
+                </p>
+                <input name="bezspama" type="text" style="display:none" value="" />
+                <p>
+                    <button id="send_mes" class="button" type="button">Отправить сообщение</button>
+                </p>
+            </form>
+    </table>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	function clickHandler(){
+		alert("Ваше сообщение отправлено");
+		location.reload()
+		}
+	var anchor = document.getElementById('send_mes');
+	if(anchor.addEventListener) {
+		anchor.addEventListener('click', clickHandler, false);
+	}
+ </script>
